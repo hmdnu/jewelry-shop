@@ -4,6 +4,13 @@
 
 @layer base {
   .heading-1 {
-    @apply text-[80px];
+    @apply font-heading text-7xl font-semibold;
+  }
+
+  .heading-2 {
+    @apply font-heading text-4xl font-semibold;
+  }
+  .paragraph {
+    @apply font-body font-normal text-xl text-secondary;
   }
 }
