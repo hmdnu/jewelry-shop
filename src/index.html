@@ -6,6 +6,25 @@
     <title>Jewelry</title>
     <!-- css -->
     <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ["Cormorant Garamond", "serif"],
+              body: ["Montserrat", "sans-serif"],
+            },
+
+            colors: {
+              primary: "#3E3E3C",
+              secondary: "#7A3838",
+              tertiary: "#FFEBB5",
+            },
+          },
+        },
+      };
+    </script>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,8 +34,7 @@
     />
   </head>
   <body class="bg-[#FFFBF0]">
-    <!-- hero -->
-    <section class="bg-primary h-screen">
+    <section class="bg-primary min-h-screen">
       <!-- navbar -->
       <nav class="text-white font-body">
         <div class="flex w-[85%] m-auto py-[45px] justify-between items-center">
@@ -69,8 +87,33 @@
         </div>
       </nav>
       <!-- end navbar -->
+      <!-- hero -->
+      <section
+        class="w-[85%] mx-auto max-2xl:mt-0 mt-20 flex flex-col-reverse xl:flex-row items-center justify-between max-xl:gap-5 max-sm:gap-10"
+      >
+        <div class="max-xl:flex max-sm:flex-col items-center gap-10 inline">
+          <h1
+            class="indent-5 max-md:indent-3 max-sm:indent-0 font-heading text-tertiary max-sm:text-5xl max-md:text-[60px] max-xl:text-[70px] text-[80px] font-semibold tracking-[12px] max-md:tracking-[10px] max-sm:tracking-[7px] sm:text-start text-center leading-[95px] max-md:leading-[85px] max-sm:leading-[70px]"
+          >
+            JEWELRY<br />COLLECTION
+          </h1>
+          <!-- arrow learn more -->
+          <div class="mt-10 max-xl:mt-0 flex flex-col xl:flex-row items-center gap-6">
+            <div
+              class="grid place-content-center size-[94px] border border-tertiary rounded-full bg-[#4B4B4BB2] cursor-pointer shadow-[0px_4px_4px_0px_#00000040]"
+            >
+              <img class="rotate-[135deg] w-[40px]" src="/public/icons/right-arrow.svg" alt="Left Bottom Arrow" />
+            </div>
+            <h2 class="font-body text-white cursor-pointer max-lg:text-sm sm:text-nowrap lg:text-nowrap">LEARN MORE</h2>
+          </div>
+        </div>
+        <!-- hero img -->
+        <div class="md:w-[400px] md:h-[550px] w-[350px] h-[480px]">
+          <img class="rounded-t-full object-cover object-bottom w-full h-full" src="/public/img/woman-1.jpeg" alt="" />
+        </div>
+      </section>
+      <!-- end hero -->
     </section>
-    <!-- end hero -->
 
     <script src="script.js"></script>
   </body>

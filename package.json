@@ -3,7 +3,7 @@
   "module": "index.html",
   "type": "module",
   "scripts": {
-    "css": "bunx tailwindcss -i ./src/input.css -o ./src/dist/output.css --watch"
+    "build": "bunx tailwindcss -i ./src/input.css -o ./src/dist/output.css"
   },
   "devDependencies": {
     "@types/bun": "latest",
