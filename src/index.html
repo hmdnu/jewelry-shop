@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewelry</title>
     <!-- css -->
-    <link rel="stylesheet" href="./dist/output.css" />
+    <!-- <link rel="stylesheet" href="./dist/output.css" /> -->
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <!-- cdn -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -33,21 +33,27 @@
           },
         },
       };
-    </script> -->
-    <!-- <style type="text/tailwindcss">
+    </script>
+    <style type="text/tailwindcss">
       @layer base {
         .heading-1 {
-          @apply font-heading text-7xl font-semibold;
+          @apply font-heading sm:text-7xl text-5xl font-semibold;
         }
 
         .heading-2 {
-          @apply font-heading text-4xl font-semibold;
+          @apply font-heading sm:text-4xl text-2xl font-semibold;
         }
         .paragraph {
-          @apply font-body font-normal text-xl text-secondary;
+          @apply font-body font-normal sm:text-xl text-base text-secondary;
         }
       }
-    </style> -->
+
+      @layer components {
+        .section-container {
+          @apply bg-quarternary sm:mt-24 mt-16 w-[85%] mx-auto;
+        }
+      }
+    </style>
   </head>
   <body class="bg-[#FFFBF0]">
     <section class="bg-primary min-h-screen">
@@ -111,7 +117,7 @@
       >
         <div class="max-xl:flex max-sm:flex-col items-center gap-10 inline">
           <h1
-            class="indent-5 max-md:indent-3 max-sm:indent-0 font-heading text-tertiary max-sm:text-5xl max-md:text-[60px] max-xl:text-[70px] text-[80px] font-semibold tracking-[12px] max-md:tracking-[10px] max-sm:tracking-[7px] sm:text-start text-center leading-[95px] max-md:leading-[85px] max-sm:leading-[70px]"
+            class="indent-5 max-md:indent-3 max-sm:indent-0 font-heading text-tertiary max-sm:text-4xl max-md:text-[60px] max-xl:text-[70px] text-[80px] font-semibold tracking-[12px] max-md:tracking-[10px] max-sm:tracking-[7px] sm:text-start text-center leading-[95px] max-md:leading-[85px] max-sm:leading-[60px]"
           >
             JEWELRY<br />COLLECTION
           </h1>
@@ -126,7 +132,7 @@
           </div>
         </div>
         <!-- hero img -->
-        <div class="md:w-[400px] md:h-[550px] w-[350px] h-[480px]">
+        <div class="md:w-[400px] md:h-[550px] w-[300px] h-[480px]">
           <img
             class="rounded-t-full object-cover object-bottom w-full h-full"
             src="/public/img/woman-1.jpeg"
@@ -138,42 +144,65 @@
     </section>
 
     <!-- section 2  -->
-    <section class="bg-quarternary mt-[110px]">
-      <section class="w-[85%] mx-auto">
-        <div class="flex justify-between gap-5 max-xl:flex-col">
-          <!-- title -->
-          <div>
-            <h1 class="heading-1 leading-tight">Jewelry speaks <br />volumes of stories</h1>
-            <div class="flex max-sm:flex-col mt-20 gap-5">
-              <div>
-                <h2 class="heading-2">GOLD</h2>
-                <p class="paragraph mt-5">Her sharp perception encompassed two deliberate intentions</p>
-              </div>
-              <div>
-                <h2 class="heading-2">SILVER</h2>
-                <p class="paragraph mt-5">Her sharp perception encompassed two deliberate intentions</p>
-              </div>
-            </div>
-          </div>
 
-          <!-- aside -->
-          <div class="max-xl:mt-5">
+    <section class="section-container">
+      <div class="flex justify-between gap-5 max-xl:flex-col">
+        <!-- title -->
+        <div>
+          <h1 class="heading-1 leading-tight">Jewelry speaks <br />volumes of stories</h1>
+          <div class="flex max-sm:flex-col sm:mt-20 mt-10 gap-5">
             <div>
-              <h1 class="heading-2">Our Journey</h1>
-              <p class="paragraph mt-5">
-                Contemporary jewelry often incorporates gold, silver, or platinum alongside precious or semi-precious
-                gemstones.
-              </p>
+              <h2 class="heading-2">GOLD</h2>
+              <p class="paragraph mt-5">Her sharp perception encompassed two deliberate intentions</p>
             </div>
-            <!-- image aside -->
-            <div class="h-[300px] w-[400px] mx-auto">
-              <img class="w-full h-full object-cover object-center" src="/public/img/ring-2.png" alt="ring" />
+            <div>
+              <h2 class="heading-2">SILVER</h2>
+              <p class="paragraph mt-5">Her sharp perception encompassed two deliberate intentions</p>
             </div>
           </div>
         </div>
-      </section>
+
+        <!-- aside -->
+        <div class="max-xl:mt-5">
+          <div>
+            <h1 class="heading-2">Our Journey</h1>
+            <p class="paragraph mt-5">
+              Contemporary jewelry often incorporates gold, silver, or platinum alongside precious or semi-precious
+              gemstones.
+            </p>
+          </div>
+          <!-- image aside -->
+          <div class="h-[300px] sm:w-[400px] w-[300px] max-md:mx-auto">
+            <img class="w-full h-full object-cover object-center" src="/public/img/ring-2.png" alt="ring" />
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- section 3 -->
+    <section class="section-container">
+      <div class="md:relative">
+        <div class="h-[560px] max-sm:h-[300px]">
+          <img class="w-full h-full object-cover object-[50%_50%]" src="/public/img/ring-1.jpeg" alt="woman" />
+        </div>
+
+        <div
+          class="max-md:flex max-md:mt-10 max-sm:flex-col-reverse max-sm:items-end justify-between items-center h-fit"
+        >
+          <p class="paragraph mt-10 md:ml-5 w-[70%] max-2xl:w-[60%] max-xl:w-[50%] max-sm:w-fit">
+            Jewelry in modern times typically consists of gold, silver, or platinum, frequently complemented by precious
+            or semi-precious stones.
+          </p>
+
+          <!-- absolute img -->
+          <div
+            class="h-[370px] w-[340px] max-lg:h-[300px] max-lg:w-[280px] max-md:h-[280px] max-md:w-[250px] md:absolute md:right-10 md:-bottom-32 max-lg:-bottom-5"
+          >
+            <img class="h-full w-full object-cover object-[50%_60%]" src="/public/img/woman-2.jpeg" alt="woman" />
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
