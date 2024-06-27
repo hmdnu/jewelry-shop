@@ -41,8 +41,13 @@
         }
 
         .heading-2 {
+          @apply font-heading text-6xl max-lg:text-5xl max-sm:text-3xl font-semibold;
+        }
+
+        .heading-3 {
           @apply font-heading sm:text-4xl text-2xl font-semibold;
         }
+
         .paragraph {
           @apply font-body font-normal sm:text-xl text-base text-secondary;
         }
@@ -55,7 +60,7 @@
       }
     </style>
   </head>
-  <body class="bg-[#FFFBF0]">
+  <body class="bg-[#FFFBF0] pb-10">
     <section class="bg-primary min-h-screen">
       <!-- navbar -->
 
@@ -142,9 +147,8 @@
       </section>
       <!-- end hero -->
     </section>
-
+    <!-- end section 1 -->
     <!-- section 2  -->
-
     <section class="section-container">
       <div class="flex justify-between gap-5 max-xl:flex-col">
         <!-- title -->
@@ -152,11 +156,11 @@
           <h1 class="heading-1 leading-tight">Jewelry speaks <br />volumes of stories</h1>
           <div class="flex max-sm:flex-col sm:mt-20 mt-10 gap-5">
             <div>
-              <h2 class="heading-2">GOLD</h2>
+              <h2 class="heading-3">GOLD</h2>
               <p class="paragraph mt-5">Her sharp perception encompassed two deliberate intentions</p>
             </div>
             <div>
-              <h2 class="heading-2">SILVER</h2>
+              <h2 class="heading-3">SILVER</h2>
               <p class="paragraph mt-5">Her sharp perception encompassed two deliberate intentions</p>
             </div>
           </div>
@@ -165,7 +169,7 @@
         <!-- aside -->
         <div class="max-xl:mt-5">
           <div>
-            <h1 class="heading-2">Our Journey</h1>
+            <h1 class="heading-3">Our Journey</h1>
             <p class="paragraph mt-5">
               Contemporary jewelry often incorporates gold, silver, or platinum alongside precious or semi-precious
               gemstones.
@@ -178,7 +182,7 @@
         </div>
       </div>
     </section>
-
+    <!-- end section 2 -->
     <!-- section 3 -->
     <section class="section-container">
       <div class="md:relative">
@@ -203,6 +207,62 @@
         </div>
       </div>
     </section>
+    <!-- end section 3 -->
+    <!-- section 4 -->
+    <section class="section-container max-md:mt-10 mt-52">
+      <div>
+        <!-- card 1 -->
+        <div class="flex md:flex-row flex-col items-center justify-between mb-[50px]">
+          <img
+            class="w-[550px] h-[430px] max-lg:w-[450px] object-cover object-[50%_35%] border-[2px] max-md:border-b-0 border-tertiary p-2"
+            src="/public/img/hands.jpeg"
+            alt="hands"
+          />
+
+          <div class="px-8 py-4 flex-1 border-[2px] md:border-l-0 border-tertiary">
+            <div>
+              <h1 class="heading-2 mb-5">Promise Ring</h1>
+              <p class="paragraph">
+                Our skilled team of 3D modelers and artisans has the capability to craft any ring design you can dream
+                of, no matter how intricate
+              </p>
+              <div class="w-full flex max-md:justify-center mt-5">
+                <button
+                  class="border border-[#777777] md:px-6 md:py-[10px] px-5 py-2 text-[#777777] font-semibold font-body"
+                >
+                  View Categories
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="flex md:flex-row flex-col items-center justify-between mb-[50px]">
+          <img
+            class="w-[550px] h-[430px] max-lg:w-[450px] object-cover object-[50%_35%] border-[2px] max-md:border-b-0 border-tertiary p-2"
+            src="/public/img/ring-3.jpeg"
+            alt="hands"
+          />
+
+          <div class="px-8 py-4 flex-1 border-[2px] md:border-l-0 border-tertiary">
+            <div>
+              <h1 class="heading-2 mb-5">Customized Jewelry Creations</h1>
+              <p class="paragraph">
+                Our skilled team can bring any ring design to life, no matter how intricate. Now available for private
+                clients
+              </p>
+            </div>
+            <div class="w-full flex max-md:justify-center mt-5">
+              <button
+                class="border border-[#777777] md:px-6 md:py-[10px] px-5 py-2 text-[#777777] font-semibold font-body"
+              >
+               Go To Shop
+              </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section 4 -->
     <script src="script.js"></script>
   </body>
 </html>
